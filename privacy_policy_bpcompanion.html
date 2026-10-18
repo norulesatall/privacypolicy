@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - BP Companion</title>
+    <style>
+        :root {
+            --primary-color: #2b6cb0;
+            --text-color: #2d3748;
+            --heading-color: #1a202c;
+            --bg-color: #f7fafc;
+            --card-bg: #ffffff;
+            --border-color: #e2e8f0;
+            --code-bg: #edf2f7;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 24px 16px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid var(--border-color);
+        }
+
+        h1 {
+            color: var(--heading-color);
+            font-size: 2rem;
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.35rem;
+            margin-top: 32px;
+            margin-bottom: 12px;
+        }
+
+        p, li {
+            margin-bottom: 12px;
+        }
+
+        ul, ol {
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background-color: var(--code-bg);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.9em;
+        }
+
+        .contact-info {
+            background-color: var(--bg-color);
+            padding: 16px;
+            border-radius: 6px;
+            border-left: 4px solid var(--primary-color);
+            margin-top: 12px;
+        }
+
+        .contact-info p {
+            margin: 4px 0;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            h2 {
+                font-size: 1.15rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Privacy Policy</h1>
+
+    <h2>1. Overview &amp; Privacy Commitment</h2>
+    <p>BP Companion is committed to protecting your privacy and personal health data. The application is built with a 100% on-device, privacy-by-default architecture.</p>
+    <p>We do not collect, transmit, monetize, sell, or rent your blood pressure logs or personal data to any third party. All records and preferences stay strictly within your device's isolated local storage.</p>
+
+    <h2>2. Information We Collect &amp; Store</h2>
+    <p>BP Companion stores information exclusively on your physical device:</p>
+    <ul>
+        <li>
+            <strong>Blood Pressure &amp; Pulse Logs:</strong>
+            <ul>
+                <li>Systolic pressure (mmHg), Diastolic pressure (mmHg), Pulse rate (BPM), measurement timestamps, and optional user-entered notes.</li>
+                <li><strong>Storage Location:</strong> Stored exclusively in local on-device SQLite database tables (Android Room Database).</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Reminder &amp; Notification Preferences:</strong>
+            <ul>
+                <li>User-configured reminder times, active days, and notification toggle states.</li>
+                <li><strong>Storage Location:</strong> Stored in your device’s private Android Shared Preferences.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>No Account Registration:</strong>
+            <ul>
+                <li>You are not required to create an account, log in, or provide personal identity details (such as your full name, email address, or phone number) to log and track your measurements.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>3. No External Servers or Third-Party Analytics</h2>
+    <ul>
+        <li><strong>No Third-Party Tracking or Telemetry:</strong> We do not integrate third-party ad networks, user behavior analytics (e.g., Google Analytics, Firebase Analytics), or user profiling SDKs.</li>
+        <li><strong>No Cloud Database Sync:</strong> We do not operate remote servers or a cloud database that synchronizes or backs up your biometric readings.</li>
+        <li><strong>Complete Offline Operation:</strong> The core logging, reminder alerts, analysis, and statistics features operate fully without an active internet connection.</li>
+    </ul>
+
+    <h2>4. In-App Purchases &amp; Billing</h2>
+    <ul>
+        <li><strong>Google Play In-App Billing:</strong> When purchasing BP Companion Pro (lifetime pass), transactions are handled exclusively by Google LLC via the Google Play Billing Library.</li>
+        <li><strong>Financial Data Security:</strong> We do not collect, process, view, or retain your payment method details, credit/debit card numbers, bank information, or billing address.</li>
+        <li><strong>Entitlement Verification:</strong> Google Play communicates only purchase tokens and entitlement status to unlock Pro features locally on your device.</li>
+    </ul>
+
+    <h2>5. Device Permissions Requested &amp; Justification</h2>
+    <p>BP Companion only requests the minimum Android system permissions necessary to provide its features:</p>
+    <ol>
+        <li>
+            <strong>POST_NOTIFICATIONS (Android 13+)</strong>
+            <ul>
+                <li><strong>Purpose:</strong> Required to deliver scheduled blood pressure measurement reminders and preparation alerts configured by the user.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>SCHEDULE_EXACT_ALARM</strong>
+            <ul>
+                <li><strong>Purpose:</strong> Ensures measurement reminders ring precisely at the user's selected time of day.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>VIBRATE</strong>
+            <ul>
+                <li><strong>Purpose:</strong> Delivers subtle haptic feedback for guided breathing relaxation exercises and alert timers.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>BILLING</strong>
+            <ul>
+                <li><strong>Purpose:</strong> Communicates with the official Google Play Billing system to enable optional Pro feature upgrades.</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h2>6. Data Export &amp; PDF Reports</h2>
+    <ul>
+        <li><strong>Local Generation:</strong> When utilizing the "Download PDF Report" feature, your report document is compiled and rendered 100% locally within the app's sandboxed cache directory.</li>
+        <li><strong>User Control:</strong> You retain full control over how and with whom your generated report is shared (e.g., printing or sending to your personal physician via Android's native system share sheet).</li>
+        <li><strong>No Server Interception:</strong> No copies, previews, or metadata of generated reports are uploaded or transmitted to any external server.</li>
+    </ul>
+
+    <h2>7. Data Retention &amp; Deletion</h2>
+    <p>Because all application data is stored locally on your device:</p>
+    <ul>
+        <li><strong>Granular Deletion:</strong> You can delete individual measurement logs at any time in the Records &amp; Stats tab.</li>
+        <li>
+            <strong>Full Data Wipe:</strong> You can permanently delete all stored measurements and reminder settings at any time by either:
+            <ol>
+                <li>Clearing storage/data for BP Companion in your device’s <code>Android Settings &gt; Apps &gt; BP Companion &gt; Storage &gt; Clear Data</code>.</li>
+                <li>Uninstalling the app from your device.</li>
+            </ol>
+        </li>
+    </ul>
+
+    <h2>8. Medical &amp; Health Disclaimer</h2>
+    <ul>
+        <li><strong>Not a Medical Device:</strong> BP Companion is an informational tracking and journaling tool. It is not a medical device, diagnostic system, clinical tool, or a substitute for professional medical care, diagnosis, or advice from a certified healthcare provider.</li>
+        <li><strong>Emergency Advice:</strong> Never delay or disregard professional medical advice because of information recorded in this application. In case of a medical emergency, immediately contact your local emergency services (e.g., 911, 112) or your physician.</li>
+    </ul>
+
+    <h2>9. Changes to This Privacy Policy</h2>
+    <p>We may update this Privacy Policy periodically to reflect app updates or regulatory changes. Any modifications will be updated within the application's Legal section along with an updated effective date.</p>
+
+    <h2>10. Contact Us</h2>
+    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your data privacy in BP Companion, please reach out to us:</p>
+    <div class="contact-info">
+        <p><strong>Developer / Publisher:</strong> GaryDevStudio</p>
+        <p><strong>Application:</strong> BP Companion</p>
+        <p><strong>Support Email:</strong> <a href="mailto:support@garydevstudio.app">support@bpcompanion.app</a></p>
+    </div>
+</div>
+
+</body>
+</html>
